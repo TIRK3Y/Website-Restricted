@@ -1,0 +1,145 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.night-sky {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    overflow: hidden;
+}
+
+/* Moon */
+.moon {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    width: 100px;
+    height: 100px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+    z-index: 0;
+}
+
+/* Background */
+.star {
+    position: absolute;
+    background-color: #ffffff;
+    width: 4px;
+    height: 4px; 
+    border-radius: 50%;
+    opacity: 0.8; 
+    animation: twinkle 1.5s infinite alternate;
+}
+
+/*  stars */
+.star:nth-child(n+1) { top: 10%; left: 10%; }
+.star:nth-child(n+2) { top: 5%; left: 20%; }
+.star:nth-child(n+3) { top: 15%; left: 30%; }
+.star:nth-child(n+4) { top: 20%; left: 40%; }
+.star:nth-child(n+5) { top: 25%; left: 60%; }
+.star:nth-child(n+6) { top: 30%; left: 80%; }
+.star:nth-child(n+7) { top: 40%; left: 15%; }
+.star:nth-child(n+8) { top: 45%; left: 55%; }
+.star:nth-child(n+9) { top: 50%; left: 65%; }
+.star:nth-child(n+10) { top: 10%; left: 80%; }
+.star:nth-child(n+11) { top: 80%; left: 10%; }
+.star:nth-child(n+12) { top: 75%; left: 20%; }
+.star:nth-child(n+13) { top: 60%; left: 25%; }
+.star:nth-child(n+14) { top: 30%; left: 30%; }
+.star:nth-child(n+15) { top: 50%; left: 40%; }
+.star:nth-child(n+16) { top: 90%; left: 50%; }
+.star:nth-child(n+17) { top: 70%; left: 60%; }
+.star:nth-child(n+18) { top: 20%; left: 70%; }
+.star:nth-child(n+19) { top: 85%; left: 15%; }
+.star:nth-child(n+20) { top: 25%; left: 85%; }
+.star:nth-child(n+21) { top: 45%; left: 25%; }
+.star:nth-child(n+22) { top: 55%; left: 30%; }
+.star:nth-child(n+23) { top: 75%; left: 40%; }
+.star:nth-child(n+24) { top: 10%; left: 30%; }
+.star:nth-child(n+25) { top: 15%; left: 60%; }
+.star:nth-child(n+26) { top: 80%; left: 10%; }
+.star:nth-child(n+27) { top: 90%; left: 25%; }
+.star:nth-child(n+28) { top: 5%; left: 75%; }
+.star:nth-child(n+29) { top: 10%; left: 50%; }
+.star:nth-child(n+30) { top: 20%; left: 90%; }
+.star:nth-child(n+31) { top: 40%; left: 20%; }
+.star:nth-child(n+32) { top: 70%; left: 80%; }
+.star:nth-child(n+33) { top: 50%; left: 60%; }
+.star:nth-child(n+34) { top: 20%; left: 40%; }
+.star:nth-child(n+35) { top: 30%; left: 80%; }
+.star:nth-child(n+36) { top: 15%; left: 65%; }
+.star:nth-child(n+37) { top: 65%; left: 10%; }
+.star:nth-child(n+38) { top: 55%; left: 25%; }
+.star:nth-child(n+39) { top: 40%; left: 50%; }
+.star:nth-child(n+40) { top: 85%; left: 15%; }
+.star:nth-child(n+41) { top: 5%; left: 10%; }
+.star:nth-child(n+42) { top: 90%; left: 35%; }
+.star:nth-child(n+43) { top: 10%; left: 45%; }
+.star:nth-child(n+44) { top: 50%; left: 90%; }
+.star:nth-child(n+45) { top: 30%; left: 55%; }
+.star:nth-child(n+46) { top: 75%; left: 70%; }
+.star:nth-child(n+47) { top: 80%; left: 5%; }
+.star:nth-child(n+48) { top: 20%; left: 75%; }
+.star:nth-child(n+49) { top: 10%; left: 65%; }
+.star:nth-child(n+50) { top: 60%; left: 45%; }
+.star:nth-child(n+51) { top: 20%; left: 85%; }
+.star:nth-child(n+52) { top: 45%; left: 10%; }
+.star:nth-child(n+53) { top: 30%; left: 30%; }
+.star:nth-child(n+54) { top: 50%; left: 20%; }
+.star:nth-child(n+55) { top: 75%; left: 80%; }
+.star:nth-child(n+56) { top: 85%; left: 60%; }
+.star:nth-child(n+57) { top: 95%; left: 90%; }
+.star:nth-child(n+58) { top: 35%; left: 25%; }
+.star:nth-child(n+59) { top: 15%; left: 55%; }
+.star:nth-child(n+60) { top: 25%; left: 45%; }
+
+/* Shooting*/
+.shooting-star {
+    position: absolute;
+    background-color: #FFD700;
+    height: 2px;
+    width: 80px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    animation: shoot 2s linear infinite;
+}
+
+/*Effect */
+@keyframes twinkle {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Shooting*/
+@keyframes shoot {
+    0% { transform: translate(-100%, -100%) rotate(45deg); }
+    100% { transform: translate(100vw, 100vh) rotate(45deg); }
+}
+
+/* Container*/
+.container {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px); 
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); 
+    max-width: 900px; 
+    margin: auto;
+}
